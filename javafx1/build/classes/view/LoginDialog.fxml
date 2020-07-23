@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="397.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_controller.LoginDialogController">
+   <children>
+      <StackPane prefHeight="375.0" prefWidth="397.0">
+         <children>
+            <Pane fx:id="pane_sign_up" prefHeight="360.0" prefWidth="396.0" style="-fx-background-color: #c9f5f0;">
+               <children>
+                  <Button fx:id="btn_back_to_login" layoutX="16.0" layoutY="14.0" mnemonicParsing="false" onAction="#backToSignin" text="Quay lại đăng nhập" />
+                  <TextField layoutX="113.0" layoutY="132.0" prefHeight="25.0" prefWidth="253.0" />
+                  <Label layoutX="113.0" layoutY="73.0" prefHeight="17.0" prefWidth="199.0" text="Đăng ký tài khoản" />
+                  <Label alignment="CENTER_RIGHT" layoutX="26.0" layoutY="136.0" prefHeight="17.0" prefWidth="60.0" text="Tài khoản" />
+                  <TextField layoutX="113.0" layoutY="166.0" prefHeight="25.0" prefWidth="253.0" />
+                  <Label alignment="CENTER_RIGHT" layoutX="7.0" layoutY="170.0" prefHeight="17.0" prefWidth="77.0" text="Mật khẩu" />
+                  <TextField layoutX="113.0" layoutY="199.0" prefHeight="25.0" prefWidth="253.0" />
+                  <Label alignment="CENTER_RIGHT" layoutX="8.0" layoutY="203.0" prefHeight="17.0" prefWidth="77.0" text="Xác nhận MK" />
+                  <Label layoutX="113.0" layoutY="105.0" prefHeight="17.0" prefWidth="254.0" text="Thông báo here~" />
+                  <Button layoutX="113.0" layoutY="248.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="255.0" text="Đăng ký" />
+               </children>
+            </Pane>
+            <Pane fx:id="pane_sign_in" layoutX="10.0" layoutY="10.0" prefHeight="360.0" prefWidth="396.0" style="-fx-background-color: #c9f5f0;">
+               <children>
+                  <TextField fx:id="txtf_username" layoutX="113.0" layoutY="132.0" prefHeight="25.0" prefWidth="253.0" />
+                  <Label layoutX="113.0" layoutY="73.0" prefHeight="17.0" prefWidth="199.0" text="Đăng nhập" />
+                  <Label alignment="CENTER_RIGHT" layoutX="26.0" layoutY="136.0" prefHeight="17.0" prefWidth="60.0" text="Tài khoản" />
+                  <Label alignment="CENTER_RIGHT" layoutX="7.0" layoutY="170.0" prefHeight="17.0" prefWidth="77.0" text="Mật khẩu" />
+                  <Label fx:id="lb_message_1" layoutX="113.0" layoutY="105.0" prefHeight="17.0" prefWidth="254.0" textFill="RED" />
+                  <Button fx:id="btn_login" layoutX="112.0" layoutY="213.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="255.0" text="Đăng nhập" />
+                  <Button fx:id="btn_go_to_sign_up" layoutX="112.0" layoutY="336.0" mnemonicParsing="false" onAction="#goToSignUp" prefHeight="25.0" prefWidth="255.0" text="Tạo tài khoản" />
+                  <PasswordField fx:id="passf_password" layoutX="113.0" layoutY="166.0" prefHeight="25.0" prefWidth="253.0" />
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

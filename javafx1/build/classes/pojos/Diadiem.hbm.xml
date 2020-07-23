@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 23, 2020 10:20:11 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojos.Diadiem" table="diadiem" catalog="qlhoinghi" optimistic-lock="version">
+        <id name="ma" type="java.lang.Integer">
+            <column name="ma" />
+            <generator class="identity" />
+        </id>
+        <property name="ten" type="string">
+            <column name="ten" />
+        </property>
+        <property name="diachi" type="string">
+            <column name="diachi" />
+        </property>
+        <property name="succhua" type="java.lang.Integer">
+            <column name="succhua" />
+        </property>
+        <set name="hoinghis" table="hoinghi" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="diadiem" />
+            </key>
+            <one-to-many class="pojos.Hoinghi" />
+        </set>
+    </class>
+</hibernate-mapping>

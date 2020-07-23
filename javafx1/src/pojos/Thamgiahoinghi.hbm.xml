@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 23, 2020 10:20:11 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojos.Thamgiahoinghi" table="thamgiahoinghi" catalog="qlhoinghi" optimistic-lock="version">
+        <id name="ma" type="int">
+            <column name="ma" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="hoinghi" class="pojos.Hoinghi" fetch="select">
+            <column name="mahoinghi" />
+        </many-to-one>
+        <many-to-one name="taikhoan" class="pojos.Taikhoan" fetch="select">
+            <column name="mataikhoan" />
+        </many-to-one>
+        <property name="tinhtrang" type="string">
+            <column name="tinhtrang" />
+        </property>
+        <property name="quantam" type="java.lang.Integer">
+            <column name="quantam" />
+        </property>
+        <property name="ten" type="string">
+            <column name="ten" length="100" />
+        </property>
+        <property name="sdt" type="string">
+            <column name="sdt" length="15" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

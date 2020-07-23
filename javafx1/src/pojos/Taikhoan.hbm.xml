@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 23, 2020 10:20:11 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojos.Taikhoan" table="taikhoan" catalog="qlhoinghi" optimistic-lock="version">
+        <id name="ma" type="java.lang.Integer">
+            <column name="ma" />
+            <generator class="identity" />
+        </id>
+        <property name="ten" type="string">
+            <column name="ten" length="100" />
+        </property>
+        <property name="username" type="string">
+            <column name="username" length="100" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="100" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="45" />
+        </property>
+        <property name="gioitinh" type="string">
+            <column name="gioitinh" length="4" />
+        </property>
+        <property name="cmnd" type="string">
+            <column name="cmnd" length="100" />
+        </property>
+        <property name="sdt" type="string">
+            <column name="sdt" length="15" />
+        </property>
+        <property name="loai" type="string">
+            <column name="loai" length="100" />
+        </property>
+        <property name="captruycap" type="string">
+            <column name="captruycap" length="100" />
+        </property>
+        <property name="thamgiahoinghi" type="string">
+            <column name="thamgiahoinghi" length="100" />
+        </property>
+        <set name="hoinghis" table="hoinghi" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="nguoitao" not-null="true" />
+            </key>
+            <one-to-many class="pojos.Hoinghi" />
+        </set>
+        <set name="thamgiahoinghis" table="thamgiahoinghi" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="mataikhoan" />
+            </key>
+            <one-to-many class="pojos.Thamgiahoinghi" />
+        </set>
+    </class>
+</hibernate-mapping>
